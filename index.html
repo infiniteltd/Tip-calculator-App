@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style link -->
+    <link rel="stylesheet" href="/styles.css">
+
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <title> Tip calculator app</title>
+</head>
+
+<body class="bg-clr-light-gray-cyan">
+    <main class="margin-inline">
+        <img src="./images/logo.svg" alt="logo" class="logo db margin-inline" />
+        <form action="#">
+          <div
+            class="input-box bg-clr-white fc-dark-grayish-cyan d-flex flex-d-row fs-0_8"
+          >
+            <div class="box1">
+              <div class="">
+                <label class="m-btm db" for="billAmount">Bill</label>
+                <div class="position-relative">
+                  <input
+                    type="number"
+                    class="bg-clr-very-light-grayisg-cyan fc-very-dark-cyan border-clr-vlgc witdh-100 fs-1 br-5 padding-b-0_2 padding-inline-0_7 text-align-rt cursor-pointer"
+                    placeholder="0"
+                    id="billAmount"
+                  />
+                  <img
+                    src="./images/icon-dollar.svg"
+                    alt=""
+                    class="position-absolute size"
+                  />
+                </div>
+              </div>
+              <div class="m-bt">
+                <fieldset>
+                  <legend>Select Tip %</legend>
+                  <div class="d-grid m-top-1">
+                    <div>
+                      <input type="radio" name="Tip" id="5p" value="5" /><label
+                        for="5p"
+                        class="witdh-100 db bg-clr-very-dark-cyan fc-white border-none fs-1 br-5 padding-b-0_2 text-align-c radio-div cursor-pointer"
+                        >5%</label
+                      >
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        name="Tip"
+                        id="10p"
+                        value="10"
+                        checked
+                      /><label
+                        class="witdh-100 db bg-clr-very-dark-cyan fc-white border-none fs-1 br-5 padding-b-0_2 text-align-c radio-div cursor-pointer"
+                        for="10p"
+                        >10%</label
+                      >
+                    </div>
+                    <div>
+                      <input type="radio" name="Tip" id="15p" value="15" /><label
+                        for="15p"
+                        class="witdh-100 db bg-clr-very-dark-cyan fc-white border-none fs-1 br-5 padding-b-0_2 text-align-c radio-div cursor-pointer"
+                        >15%</label
+                      >
+                    </div>
+                    <div>
+                      <input type="radio" name="Tip" id="25p" value="25" /><label
+                        for="25p"
+                        class="witdh-100 db bg-clr-very-dark-cyan fc-white border-none fs-1 br-5 padding-b-0_2 text-align-c radio-div cursor-pointer"
+                        >25%</label
+                      >
+                    </div>
+                    <div class="">
+                      <input type="radio" name="Tip" id="50p" value="50" />
+                      <label
+                        for="50p"
+                        class="witdh-100 db bg-clr-very-dark-cyan fc-white border-none fs-1 br-5 padding-b-0_2 text-align-c radio-div cursor-pointer"
+                        >50%</label
+                      >
+                    </div>
+  
+                    <input
+                      type="number"
+                      placeholder="Custom"
+                      id="tipPercentage"
+                      class="bg-clr-very-light-grayisg-cyan fc-very-dark-cyan border-clr-vlgc witdh-100 fs-1 br-5 text-align-rt custom cursor-pointer"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+              <div class="m-bt">
+                <div class="d-flex">
+                  <label class="m-btm" for="numberOfPeople"
+                    >Number of People</label
+                  >
+                  <span class="clr-red db-none" id="zero">Can't be zero</span>
+                </div>
+                <div class="position-relative">
+                  <input
+                    type="number"
+                    class="bg-clr-very-light-grayisg-cyan fc-very-dark-cyan border-clr-vlgc witdh-100 fs-1 br-5 padding-b-0_2 padding-inline-0_7 text-align-rt cursor-pointer"
+                    placeholder="0"
+                    id="numberOfPeople"
+                  />
+                  <img
+                    src="./images/icon-person.svg"
+                    alt=""
+                    class="position-absolute size"
+                  />
+                </div>
+              </div>
+            </div>
+  
+            <div
+              class="bg-clr-very-dark-cyan br-15 m-top-2 padding-inline-1 padding-block1_8 box2"
+            >
+              <div class="m-btm-2 d-flex flex-at-c">
+                <p class="total fc-white">
+                  Tip Amount<span class="fc-dark-grayish-cyan db">/ person</span>
+                </p>
+                <p class="amount fc-Strong-cyan fs-2" id="displayTipAmount">
+                  $0.00
+                </p>
+              </div>
+              <div class="m-btm-2 d-flex flex-at-c">
+                <p class="total fc-white">
+                  Total<span class="fc-dark-grayish-cyan db">/ person</span>
+                </p>
+                <p class="amount fc-Strong-cyan fs-2" id="displayTotalAmount">
+                  $0.00
+                </p>
+              </div>
+              <input
+                type="reset"
+                class="bg-clr-strong-cyan fc-very-dark-cyan border-none witdh-100 br-5 padding-b-0_6 reset-btn cursor-pointer"
+                value="RESET"
+                id="reset"
+                disabled
+              />
+            </div>
+          </div>
+        </form>
+      </main>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">@infiniteltd</a>.
+    </div>
+
+    <!-- js link -->
+    <script src="/app.js"></script>
+</body>
+
+</html>
